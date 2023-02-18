@@ -1,0 +1,14 @@
+{
+  "name": "pulls_remover",
+  "version": "1.0.0",
+  "description": "Automatic Deletion Service for Closed Application Instances in a Linux Environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Ushanev",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/core": "^4.2.0"
+  }
+}
