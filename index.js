@@ -24,6 +24,4 @@ const RemovePulls = async () => {
     Util.DockerNetworkPrune();
 }
 
-const all = require('./config');
-console.log(all);
-//RemovePulls();
+RemovePulls();
