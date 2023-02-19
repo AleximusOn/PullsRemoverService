@@ -22,6 +22,7 @@ const RemovePulls = async () => {
         Util.StartRemovingPull(folder);
     }
     Util.DockerNetworkPrune();
+    Util.ReloadNginx();
 }
 
 RemovePulls();

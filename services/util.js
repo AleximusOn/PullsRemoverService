@@ -3,6 +3,7 @@ const { execSync } = require('child_process');
 
 const {
     DEPLOYFOLDER,
+    NGINXCONTAINERNAME,
     NGINXCONFIGFOLDER,
     PULLPREFIX,
     DEPLOYLABEL
@@ -51,6 +52,15 @@ module.exports = class Util {
         execSync(`sudo rm ${NGINXCONFIGFOLDER}/${PULLPREFIX}${pullNumber}.conf`, function (err, stdout, stderr) {
             if (err) {
                 console.error(`nginx confing ${NGINXCONFIGFOLDER}/${PULLPREFIX}${pullNumber}.conf deleted error.`, err);
+            }
+        });
+    }
+
+    static ReloadNginx = () => {
+        console.log(`reload nginx`);
+        execSync(`sudo docker exec ${NGINXCONTAINERNAME} nginx -s reload`, function (err, stdout, stderr) {
+            if (err) {
+                console.error(`reload nginx error.`, err);
             }
         });
     }

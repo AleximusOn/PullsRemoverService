@@ -5,4 +5,5 @@ module.exports.DEPLOYLABEL = process.env.DEPLOYLABEL;
 module.exports.NOTDELETELABEL = process.env.NOTDELETELABEL;
 module.exports.DEPLOYFOLDER = process.env.DEPLOYFOLDER;
 module.exports.PULLPREFIX = process.env.PULLPREFIX;
+module.exports.NGINXCONTAINERNAME = process.env.NGINXCONTAINERNAME;
 module.exports.NGINXCONFIGFOLDER = process.env.NGINXCONFIGFOLDER;
