@@ -11,8 +11,8 @@ const {
 
 module.exports = class Util {
     static GetDeployPullNumberFolders = () => {
-        var files = fs.readdirSync(DEPLOYFOLDER, { withFileTypes: true }).filter(fn => fn.isDirectory() && fn.name.startsWith(PULLPREFIX));
-        return files.map(str => str.name.replace(PULLPREFIX, "")).filter(Boolean);
+        const folders = fs.readdirSync(DEPLOYFOLDER, { withFileTypes: true }).filter(fn => fn.isDirectory() && fn.name.startsWith(PULLPREFIX));
+        return folders.map(str => str.name.replace(PULLPREFIX, "")).filter(Boolean);
     }
 
     static GetPullNumbersOfExistingFolders = (openPulls) => {
